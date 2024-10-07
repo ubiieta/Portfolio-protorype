@@ -48,29 +48,29 @@
         <script>
             window.onload = function() {
                 const mainContent = document.querySelector('main');
-                const title = document.querySelector('header h1'); // Select the header title
+                const title = document.querySelector('header h1');  
 
-                // Apply fade-in when the page loads
+          
                 mainContent.classList.add('fade-in');
                 title.classList.add('fade-in');
 
-                // Set up fade-out for navigation links
+                
                 const links = document.querySelectorAll('nav a');
                 links.forEach(link => {
                     link.addEventListener('click', function(event) {
                         event.preventDefault();
                         const target = this.href;
 
-                        // Remove fade-in and apply fade-out to both main content and title
+                        
                         mainContent.classList.remove('fade-in');
                         title.classList.remove('fade-in');
                         mainContent.classList.add('fade-out');
                         title.classList.add('fade-out');
 
-                        // Wait for the fade-out animation to complete before navigating
+                       
                         setTimeout(() => {
                             window.location.href = target;
-                        }, 500); // Match the CSS transition duration (0.5s)
+                        }, 500);  
                     });
                 });
             };
