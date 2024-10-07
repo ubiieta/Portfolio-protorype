@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aitor Ubieta - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Introduction</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id=soft class="center">
+             
+            <h2 >Hello! My name is Aitor.</h2>
+            <h3> " I like whispering to computers, sometimes they listen."</h3>
+           
+            
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Aitor Ubieta. All rights reserved.</p>
+    </footer>
+
+ 
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const mainContent = document.querySelector('main');
+                const title = document.querySelector('header h1'); // Select the header title
+
+                // Apply fade-in when the page loads
+                mainContent.classList.add('fade-in');
+                title.classList.add('fade-in');
+
+                // Set up fade-out for navigation links
+                const links = document.querySelectorAll('nav a');
+                links.forEach(link => {
+                    link.addEventListener('click', function(event) {
+                        event.preventDefault();
+                        const target = this.href;
+
+                        // Remove fade-in and apply fade-out to both main content and title
+                        mainContent.classList.remove('fade-in');
+                        title.classList.remove('fade-in');
+                        mainContent.classList.add('fade-out');
+                        title.classList.add('fade-out');
+
+                        // Wait for the fade-out animation to complete before navigating
+                        setTimeout(() => {
+                            window.location.href = target;
+                        }, 500); // Match the CSS transition duration (0.5s)
+                    });
+                });
+            });
+        </script>
+         
+
+</body>
+</html>
