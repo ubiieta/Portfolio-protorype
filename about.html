@@ -46,7 +46,7 @@
 
 
         <script>
-            document.addEventListener("DOMContentLoaded", function() {
+            window.onload = function() {
                 const mainContent = document.querySelector('main');
                 const title = document.querySelector('header h1'); // Select the header title
 
@@ -73,7 +73,7 @@
                         }, 500); // Match the CSS transition duration (0.5s)
                     });
                 });
-            });
+            };
         </script>
 </body>
 </html>

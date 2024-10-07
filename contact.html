@@ -21,7 +21,7 @@
 
     <main>
          
-        <form action="#" method="post">
+        <form id=soft action="#" method="post">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
 
@@ -60,8 +60,8 @@
 
 
 
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
+       <script>
+            window.onload = function() {
                 const mainContent = document.querySelector('main');
                 const title = document.querySelector('header h1'); // Select the header title
 
@@ -88,7 +88,7 @@
                         }, 500); // Match the CSS transition duration (0.5s)
                     });
                 });
-            });
+            };
         </script>
  
 </body>
