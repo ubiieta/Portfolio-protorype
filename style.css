@@ -30,6 +30,35 @@ main {
     flex: 1;
 }
 
+
+
+/* Specific styling to allow scrolling in project page */
+
+
+body.projects-page {
+    display: block;
+    flex-direction: column;
+    
+}
+
+
+main.projects-page {
+    color: whitesmoke;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #1f1f1f;
+    padding: 20px;
+    display: flex; /* Use flexbox here */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Add this to stack the project divs vertically */
+    flex: 1;
+}
+
+
+
+
+
 /* Fade-in / Fade-out Effects */
 main, h1 {
     opacity: 0;
@@ -46,6 +75,7 @@ main.fade-out, h1.fade-out {
 
 /* Text Styling */
 h1 {
+    font: size 60px;
     padding: 10px;
 }
 
@@ -76,9 +106,10 @@ h3 {
 header {
     background-color: #50979a;
     color: #2c2c2c;
-    padding: 10px 0;
+    padding: 10px;
     text-align: center;
     transition: opacity 0.5s ease-in-out;
+    height:99px!important;
 }
 
 /* Link Styling */
@@ -109,16 +140,13 @@ nav ul li a:hover {
     color: #e0b34a;
 }
 
-/* Section and Footer */
-section {
-    margin-top: 20px;
-}
 
 footer {
     text-align: center;
     padding: 10px;
     background-color: #50979a;
     color: #2c2c2c;
+    height: 44px!important;
 }
 
 /* Form Styling */
@@ -184,3 +212,8 @@ form input[type="submit"]:hover {
     width: 550px;
     text-align: left;
 }
+
+
+
+
+
