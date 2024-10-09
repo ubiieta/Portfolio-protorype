@@ -7,14 +7,24 @@
 
 html, body {
     background-color: #1f1f1f;
-    height: 100%;
     margin: 0;
+    scroll-behavior: smooth;
 }
 
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+     height:99%;
+}
+
+body {
+    overflow: -moz-scrollbars-none;  /* For Firefox */
+    -ms-overflow-style: none;  /* For Internet Explorer and Edge */
+}
+
+body::-webkit-scrollbar {
+    display: none;  /* For Chrome, Safari, and Opera */
 }
 
 /* Main Styling */
@@ -28,6 +38,7 @@ main {
     justify-content: center;
     align-items: center;
     flex: 1;
+   
 }
 
 
@@ -36,7 +47,7 @@ main {
 
 
 body.projects-page {
-    display: block;
+    display: flex;
     flex-direction: column;
     
 }
@@ -97,6 +108,20 @@ h3 {
     color: #e0b34a;
 }
 
+
+.half-text{
+
+    width: 500px;
+    text-align: justify;
+    float: left;
+    padding-right: 50px;
+}
+
+
+.image-right{
+    float:right
+}
+
 .content {
     flex: 1;
     padding: 20px;
@@ -104,12 +129,15 @@ h3 {
 
 /* Header Styling */
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     background-color: #50979a;
     color: #2c2c2c;
-    padding: 10px;
     text-align: center;
-    transition: opacity 0.5s ease-in-out;
-    height:99px!important;
+    padding: 10px;
+    z-index: 1000; /* Ensure it stays on top of content */
 }
 
 /* Link Styling */
@@ -142,11 +170,15 @@ nav ul li a:hover {
 
 
 footer {
-    text-align: center;
-    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     background-color: #50979a;
     color: #2c2c2c;
-    height: 44px!important;
+    text-align: center;
+    padding: 10px;
+    z-index: 1000; /* Ensure it stays on top of content */
 }
 
 /* Form Styling */
@@ -187,6 +219,16 @@ form input[type="submit"]:hover {
 
 .submit-btn:hover {
     background-color: #e0b34a;
+}
+
+.hoverText a{
+    color: white;
+    text-decoration: none;
+
+}
+.hoverText a:hover{
+
+    color: #e0b34a;
 }
 
 /* Specific ID Styling */
