@@ -5,6 +5,13 @@
     box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'Calamity'; /* Give your font a name */
+  src: url('Calamity-Regular.otf') format('opentype'); /* Path to your .otf file */
+  font-weight: normal;
+  font-style: normal;
+}
+
 html, body {
     background-color: #1f1f1f;
     margin: 0;
@@ -88,11 +95,13 @@ main.fade-out, h1.fade-out {
 h1 {
     font: size 60px;
     padding: 10px;
+    font-family: Calamity!important;
 }
 
 h2 {
     font-size: 60px;
     color: whitesmoke;
+    font-family: Calamity!important;
 }
 
 h3 {
@@ -185,6 +194,7 @@ footer {
 form {
     display: flex;
     flex-direction: column;
+    font-family: Calamity!important;
 }
 
 form label {
